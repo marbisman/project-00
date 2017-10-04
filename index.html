@@ -9,15 +9,37 @@
  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
  <!-- custom styles -->
- <link rel="stylesheet" type="text/css" href="main.css">
+ <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <title>Zoom Zoom</title>
   </head>
   <body>
+
+    <!-- create score board -->
+    <div id="score">
+      Your current score: <span id="currentScore">x</span>
+    </div>
+
+    <!-- create your race track -->
+    <div id="lane1" class="lanes"></div>
+    <div id="lane2" class="lanes"></div>
+    <div id="lane3" class="lanes"></div>
+
+    <!-- create your  car -->
+    <div id="yourCar" class="car">
+    </div>
+
+    <!-- create opponent cars -->
+    <div id="car1" class="car">
+    </div>
+    <div id="car2" class="car">
+    </div>
+    <div id="car3" class="car">
+    </div>
     <!-- jquery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
     <!-- custom script -->
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
