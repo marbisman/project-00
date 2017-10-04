@@ -20,10 +20,14 @@
       Your current score: <span id="currentScore">x</span>
     </div>
 
-    <!-- create your race track -->
-    <div id="lane1" class="lanes"></div>
-    <div id="lane2" class="lanes"></div>
-    <div id="lane3" class="lanes"></div>
+<!--div to hold the whole track-->
+<div class="track">
+    <!-- create your race track
+    (3 lines that will move down the screen seperating
+    two lanes)-->
+    <div id="line1" class="lines"></div>
+    <div id="line2" class="lines"></div>
+    <div id="line3" class="lines"></div>
 
     <!-- create your  car -->
     <div id="yourCar" class="car">
@@ -36,6 +40,15 @@
     </div>
     <div id="car3" class="car">
     </div>
+  </div>
+
+<!--restart button to restart game-->
+  <div id="restart">
+    <button id="restart">
+      Restart
+    </button>
+  </div>
+
     <!-- jquery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
