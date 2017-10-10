@@ -14,8 +14,13 @@ var car3 = $('#car3');
 var restartBtn = $('#restart');
 
 //initial setup of your track
+var lineSpeed = 3;
 
 //initial setup of your car
+var endGame = false;
+var score = 0;
+var speed = 1;
+
 
 //initial setup of opponent cars
 
@@ -26,6 +31,23 @@ var restartBtn = $('#restart');
 //the line speed
 
 //move your car
+$(document).on('keydown', function(input)){
+  if (endGame === false){
+    var key = input.keyCode;
+    if (key ===37 && move_left === false){
+      move_left = requestAnimationFrame(left);
+    }
+    else if (key === 39 && move_right === false){
+      move_right = requestAnimationFrame(right);
+    }
+    else if (key === 38 && move_up === false){
+      move_up = requestAnimationFrame(up);
+    }
+    else if (key === 40 && move_down === false){
+      move_down = requestAnimationFrame(down);
+    }
+  }
+});
 
 //move opponent cars
 
