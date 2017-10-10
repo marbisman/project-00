@@ -4,14 +4,19 @@
     <meta charset="utf-8">
     <!-- set viewport to device width to make site responsive -->
  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Zoom Zoom</title>
 
- <!-- bootstrap css -->
- <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ <!-- stylesheets -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
- <!-- custom styles -->
- <link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/d34397fdd5.js"></script>
+<script src="app.js"></script>
 
-    <title>Zoom Zoom</title>
   </head>
   <body>
 
@@ -21,38 +26,13 @@
     </div>
 
 <!--div to hold the whole track-->
-<div class="track">
-    <!-- create your race track
-    (3 lines that will move down the screen seperating
-    two lanes)-->
-    <div id="line1" class="lines"></div>
-    <div id="line2" class="lines"></div>
-    <div id="line3" class="lines"></div>
-
-    <!-- create your  car -->
-    <div id="yourCar" class="car">
-    </div>
-
-    <!-- create opponent cars -->
-    <div id="car1" class="car">
-    </div>
-    <div id="car2" class="car">
-    </div>
-    <div id="car3" class="car">
-    </div>
-  </div>
-
+<div class="container" class="track">
+  <canvas id="track"></canvas>
+</div>
 <!--restart button to restart game-->
   <div id="restart">
-    <button id="restart">
-      Restart
-    </button>
+    <input id="resetButton" class="btn btn-default" type="button" value="Reset" onClick="window.location.reload()">
   </div>
 
-    <!-- jquery -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
-    <!-- custom script -->
-    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
