@@ -2,14 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <!-- set viewport to device width to make site responsive -->
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+<!-- set viewport to device width to make site responsive -->
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <title>Zoom Zoom</title>
 
+
  <!-- stylesheets -->
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
- <link rel="stylesheet" href="style.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+ <link rel="stylesheet" href="animate.css">
+<link rel="stylesheet" href="style.css">
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -20,15 +24,28 @@
   </head>
   <body>
 
+    <div class="title">
+      <h1 class="fadeInDown"> Zoom Zoom </h1>
+    </div>
+    <div class="instructions">
+<p> Race your friends! Player 1 use the "1" key while Player 2 uses the "Right Arrow" key to move your car forwrd. Click your key the fastest to beat your friend to the finish line.
+</p>
+    </div>
+<div class="text-center">
+    <button class="start" type="confirm"> Let's Play!</button>
+</div>
+
     <!-- create score board -->
     <div id="score">
-      Your current score: <span id="currentScore">x</span>
+      <p> Player 1: <span id="currentScore1">x</span></p>
+      <p> Player 2: <span id="currentScore2">x</span></p>
     </div>
 
 <!--div to hold the whole track-->
 <div class="container" class="track">
   <canvas id="track"></canvas>
 </div>
+
 <!--restart button to restart game-->
   <div id="restart">
     <input id="resetButton" class="btn btn-default" type="button" value="Reset" onClick="window.location.reload()">
